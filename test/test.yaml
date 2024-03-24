@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: grafana-uid-check
+spec:
+  containers:
+  - name: grafana
+    image: grafana/grafana
+    command: ['sh', '-c', 'id']
+  restartPolicy: Never
